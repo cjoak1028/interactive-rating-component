@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-grey-950: #131518;
+  --color-grey-900: #262e38;
+  --color-grey-500: #969fad;
+  --color-orange-500: #fc7614;
+  --color-gradient-from: #232a34;
+  --color-gradient-to: #181e27;
+
+  --font-overpass: "Overpass", sans-serif;
+}
