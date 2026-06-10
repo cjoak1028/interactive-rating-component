@@ -26,40 +26,97 @@
       }
     </style>
   </head>
-  <body class="font-overpass">
+  <body
+    class="font-overpass bg-grey-950 min-h-screen flex justify-center items-center px-6 py-6"
+  >
     <!-- Rating state start -->
-    <form>
-      <header>
-        <img src="./images/icon-star.svg" />
+    <form
+      class="bg-linear-to-b from-navy-start to-navy-end px-6 py-7 text-white rounded-2xl"
+    >
+      <header class="mb-6">
+        <div class="inline-block p-3 bg-grey-900 rounded-full">
+          <img src="./images/icon-star.svg" />
+        </div>
       </header>
       <fieldset>
-        <legend>How did we do?</legend>
-        <p>
+        <legend class="text-2xl font-bold mb-4">How did we do?</legend>
+        <p class="text-grey-500 text-sm mb-4">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <label for="rating-1">
-          <input type="radio" id="rating-1" name="rating" value="1" />
-          1
-        </label>
-        <label for="rating-2">
-          <input type="radio" id="rating-2" name="rating" value="2" />
-          2
-        </label>
-        <label for="rating-3">
-          <input type="radio" id="rating-3" name="rating" value="3" />
-          3
-        </label>
-        <label for="rating-4">
-          <input type="radio" id="rating-4" name="rating" value="4" />
-          4
-        </label>
-        <label for="rating-5">
-          <input type="radio" id="rating-5" name="rating" value="5" />
-          5
-        </label>
+        <div class="flex gap-4 mb-6">
+          <label
+            for="rating-1"
+            class="inline-flex size-10 bg-grey-900 justify-center items-center rounded-full text-sm text-grey-500 font-bold"
+          >
+            <input
+              type="radio"
+              id="rating-1"
+              name="rating"
+              value="1"
+              class="appearance-none"
+            />
+            1
+          </label>
+          <label
+            for="rating-2"
+            class="inline-flex size-10 bg-grey-900 justify-center items-center rounded-full text-sm text-grey-500 font-bold"
+          >
+            <input
+              type="radio"
+              id="rating-2"
+              name="rating"
+              value="2"
+              class="appearance-none"
+            />
+            2
+          </label>
+          <label
+            for="rating-3"
+            class="inline-flex size-10 bg-grey-900 justify-center items-center rounded-full text-sm text-grey-500 font-bold"
+          >
+            <input
+              type="radio"
+              id="rating-3"
+              name="rating"
+              value="3"
+              class="appearance-none"
+            />
+            3
+          </label>
+          <label
+            for="rating-4"
+            class="inline-flex size-10 bg-grey-900 justify-center items-center rounded-full text-sm text-grey-500 font-bold"
+          >
+            <input
+              type="radio"
+              id="rating-4"
+              name="rating"
+              value="4"
+              class="appearance-none"
+            />
+            4
+          </label>
+          <label
+            for="rating-5"
+            class="inline-flex size-10 bg-grey-900 justify-center items-center rounded-full text-sm text-grey-500 font-bold"
+          >
+            <input
+              type="radio"
+              id="rating-5"
+              name="rating"
+              value="5"
+              class="appearance-none"
+            />
+            5
+          </label>
+        </div>
+        <button
+          class="w-full bg-orange-500 py-4 uppercase text-grey-950 font-bold text-sm rounded-3xl leading-none"
+        >
+          Submit
+        </button>
       </fieldset>
-      <button>Submit</button>
     </form>
 
     <!-- Rating state end -->
