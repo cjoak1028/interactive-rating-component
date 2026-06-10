@@ -15,6 +15,8 @@
     --container-sm: 24rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-normal: 400;
@@ -251,6 +253,9 @@
   .max-w-103 {
     max-width: calc(var(--spacing) * 103);
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .appearance-none {
     appearance: none;
   }
@@ -362,6 +367,39 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .\*\:cursor-pointer {
+    :is(& > *) {
+      cursor: pointer;
+    }
+  }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-grey-900 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-grey-900);
+      }
+    }
+  }
+  .\*\:has-\[\:checked\]\:bg-orange-500 {
+    :is(& > *) {
+      &:has(*:is(:checked)) {
+        background-color: var(--color-orange-500);
+      }
+    }
+  }
+  .\*\:has-\[\:checked\]\:text-grey-900 {
+    :is(& > *) {
+      &:has(*:is(:checked)) {
+        color: var(--color-grey-900);
+      }
+    }
+  }
   .md\:mb-8 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 8);
@@ -402,6 +440,12 @@
   .md\:py-9 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .md\:text-\[0\.94rem\] {
