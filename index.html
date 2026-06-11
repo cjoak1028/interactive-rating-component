@@ -16,7 +16,7 @@
     <title>Frontend Mentor | Interactive rating component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       .attribution {
         font-size: 0.6875rem;
         text-align: center;
@@ -24,7 +24,7 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body
     class="font-overpass bg-grey-950 min-h-screen flex justify-center items-center px-6 py-6 text-white"
@@ -34,7 +34,7 @@
       class="bg-linear-to-b from-navy-start to-navy-end px-6 py-7 md:px-8 md:py-9 rounded-2xl max-w-85 md:max-w-103"
     >
       <!-- Rating state start -->
-      <!-- <form>
+      <form id="rating-form">
         <header class="mb-6">
           <div
             class="inline-flex size-10 md:size-12 justify-center items-center bg-grey-900 rounded-full"
@@ -123,15 +123,16 @@
             </label>
           </div>
           <button
+            type="submit"
             class="w-full h-12 flex items-center justify-center bg-orange-500 uppercase text-grey-950 font-bold text-sm rounded-3xl leading-none hover:bg-white cursor-pointer"
           >
             Submit
           </button>
         </fieldset>
-      </form> -->
+      </form>
       <!-- Rating state end -->
       <!-- Thank you state start -->
-      <div class="flex flex-col gap-6 md:gap-8">
+      <div id="thank-you-state" class="flex flex-col gap-6 md:gap-8 hidden">
         <img
           src="./images/illustration-thank-you.svg"
           alt="Thank you illustration"
@@ -140,7 +141,7 @@
         <p
           class="bg-grey-900 text-orange-500 py-[6px] px-3 self-center rounded-3xl text-sm md:text-[0.94rem]"
         >
-          You selected 4 out of 5
+          You selected <span id="client-rating">4</span> out of 5
         </p>
         <section class="text-center">
           <h1 class="mb-4 text-2xl md:text-[1.75rem] font-bold">Thank you!</h1>
@@ -152,6 +153,8 @@
       </div>
       <!-- Thank you state end -->
     </article>
+
+    <script src="./script.js"></script>
 
     <!-- <footer class="attribution">
       Challenge by
