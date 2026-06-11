@@ -8,7 +8,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(93.6% 0.032 17.717);
     --color-orange-500: #fc7614;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -191,9 +190,6 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
-  .block {
-    display: block;
-  }
   .contents {
     display: contents;
   }
@@ -213,12 +209,8 @@
     width: calc(var(--spacing) * 10);
     height: calc(var(--spacing) * 10);
   }
-  .size-13 {
-    width: calc(var(--spacing) * 13);
-    height: calc(var(--spacing) * 13);
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
@@ -226,32 +218,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-3 {
-    width: calc(var(--spacing) * 3);
-  }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
+  .w-36 {
+    width: calc(var(--spacing) * 36);
   }
   .w-\[0\.88rem\] {
     width: 0.88rem;
   }
-  .w-\[0\.875rem\] {
-    width: 0.875rem;
-  }
   .w-full {
     width: 100%;
   }
-  .w-sm {
-    width: var(--container-sm);
-  }
   .max-w-85 {
     max-width: calc(var(--spacing) * 85);
-  }
-  .max-w-103 {
-    max-width: calc(var(--spacing) * 103);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -259,8 +236,8 @@
   .appearance-none {
     appearance: none;
   }
-  .content-center {
-    align-content: center;
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -271,8 +248,14 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .self-center {
+    align-self: center;
+  }
+  .self-start {
+    align-self: flex-start;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -307,20 +290,23 @@
     --tw-gradient-to: var(--color-navy-end);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
+  .p-\[6px\] {
+    padding: 6px;
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
-  }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
+  }
+  .py-\[6px\] {
+    padding-block: 6px;
   }
   .text-center {
     text-align: center;
@@ -336,6 +322,22 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
+  .leading-\[5\.5\] {
+    --tw-leading: 5.5;
+    line-height: 5.5;
+  }
+  .leading-\[5\.5rem\] {
+    --tw-leading: 5.5rem;
+    line-height: 5.5rem;
+  }
+  .leading-\[22px\] {
+    --tw-leading: 22px;
+    line-height: 22px;
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -344,24 +346,20 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-normal {
-    --tw-font-weight: var(--font-weight-normal);
-    font-weight: var(--font-weight-normal);
-  }
   .text-grey-500 {
     color: var(--color-grey-500);
   }
   .text-grey-950 {
     color: var(--color-grey-950);
   }
+  .text-orange-500 {
+    color: var(--color-orange-500);
+  }
   .text-white {
     color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
-  }
-  .opacity-0 {
-    opacity: 0%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -417,11 +415,6 @@
       height: calc(var(--spacing) * 13);
     }
   }
-  .md\:w-\[1\.05rem\] {
-    @media (width >= 48rem) {
-      width: 1.05rem;
-    }
-  }
   .md\:w-\[1\.06rem\] {
     @media (width >= 48rem) {
       width: 1.06rem;
@@ -456,16 +449,6 @@
   .md\:text-\[1\.75rem\] {
     @media (width >= 48rem) {
       font-size: 1.75rem;
-    }
-  }
-  .md\:text-\[7rem\] {
-    @media (width >= 48rem) {
-      font-size: 7rem;
-    }
-  }
-  .md\:text-\[7\] {
-    @media (width >= 48rem) {
-      color: 7;
     }
   }
 }
